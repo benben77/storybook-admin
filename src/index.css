@@ -2,3 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
+.g__flex--1 {
+  flex: 1;
+}

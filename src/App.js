@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,7 +7,7 @@ import {
 } from "react-router-dom";
 import Dashboard from './pages/Dashboard';
 import Test from './pages/Test';
-import styles from './App.module.css';
+import styles from './App.module.less';
 
 export default function App(props) {
   const navLinks = [
@@ -14,14 +15,16 @@ export default function App(props) {
     { url: '/storybooks', name: 'Story books' },
   ].map(x => {
     return (
-      <div>
-        <NavLink key={x.url} className={styles.link} to={x.url} activeClassName={styles.linkActive}>{x.name}</NavLink>
-      </div>
+      <NavLink key={x.url} exact className={styles.link} to={x.url} activeClassName={styles.linkActive}>{x.name}</NavLink>
     );
   });
   return (
     <div className={styles.app}>
-      <div className={styles.header}>Header</div>
+      <div className={styles.header}>
+        <div>Storybook Editor</div>
+        <div className="g__flex--1"></div>
+        <div>Miaosiyu</div>
+      </div>
       <div className={styles.body}>
         <Router>
           <div className={styles.nav}>
