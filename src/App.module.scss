@@ -1,4 +1,4 @@
-@import './colors.less';
+@import './colors.scss';
 
 .app {
   position: fixed;
@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   padding: 0 12px;
-  border-bottom: 1px solid @gray-3;
+  border-bottom: 1px solid $gray-3;
 }
 .body {
   flex: 1;
@@ -27,21 +27,21 @@
 }
 .nav {
   padding: 12px 0;
-  border-right: 1px solid @gray-3;
+  border-right: 1px solid $gray-3;
 }
 .link {
   display: block;
   padding: 12px;
-  background: @gray-1;
-  color: @gray-12;
+  background: $gray-1;
+  color: $gray-12;
 }
 .linkActive {
-  background: @gray-3;
-  color: @gray-12;
+  background: $gray-3;
+  color: $gray-12;
 }
 .footer {
   line-height: 32px;
   text-align: center;
-  color: @gray-9;
-  background: @gray-3;
+  color: $gray-9;
+  background: $gray-3;
 }
